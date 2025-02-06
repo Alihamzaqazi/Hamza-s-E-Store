@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamza's Store</title>
+    <title>Hamza's Digital Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -14,17 +14,18 @@
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #1a1a1a;
+            color: white;
         }
 
         header {
-            background: #1a1a1a;
-            color: white;
+            background: #121212;
             padding: 1rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid #2ecc71;
         }
 
         nav {
@@ -35,179 +36,6 @@
             margin: 0 auto;
         }
 
-        .products-container {
-            max-width: 1200px;
-            margin: 80px auto 40px;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .buy-btn {
-            background: #2ecc71;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .payment-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .payment-content {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        .payment-method {
-            margin: 15px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .transaction-id-input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .hero {
-            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
-            color: white;
-            padding: 120px 20px 80px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: #2d2d2d;
-            padding: 4rem 2rem;
-            color: white;
-        }
-
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: #3a3a3a;
-            padding: 2rem;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .testimonial-quote {
-            font-size: 3rem;
-            color: #2ecc71;
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            opacity: 0.3;
-        }
-
-        .testimonial-text {
-            margin-bottom: 1rem;
-            color: #eeeeee;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .author-info {
-            line-height: 1.4;
-        }
-
-        .author-name {
-            font-weight: bold;
-            color: #2ecc71;
-        }
-
-        .author-role {
-            color: #cccccc;
-            font-size: 0.9rem;
-        }
-
-        /* Navigation Link */
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -223,13 +51,193 @@
         .nav-link:hover {
             color: #2ecc71;
         }
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
+
+        .hero {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            padding: 150px 20px 80px;
             text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #2ecc71;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 20px;
-            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border: 1px solid #3a3a3a;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .buy-btn {
+            background: #2ecc71;
+            color: #1a1a1a;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .payment-content {
+            background: #2d2d2d;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .payment-method {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #3a3a3a;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .payment-method:hover {
+            border-color: #2ecc71;
+        }
+
+        .transaction-id-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #3a3a3a;
+            border: 1px solid #4a4a4a;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .testimonials {
+            background: #121212;
+            padding: 4rem 2rem;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2ecc71;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #2d2d2d;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #3a3a3a;
+        }
+
+        .main-footer {
+            background: #121212;
+            padding: 4rem 2rem;
+            border-top: 1px solid #2ecc71;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #2ecc71;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a:hover {
+            color: #2ecc71;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #3a3a3a;
         }
     </style>
 </head>
@@ -250,58 +258,45 @@
             </div>
         </nav>
     </header>
- <!-- Hero Section -->
- <section class="hero" id="hero">
-    <div class="hero-content">
-        <h1>Premium Digital Assets Marketplace</h1>
-        <p>Discover high-quality digital products for all your creative needs</p>
-        <a href="#products" class="nav-link">Explore Products</a>
-    </div>
-</section>
-<!-- Testimonials Section -->
-<section class="testimonials" id="testimonials">
-    <div class="testimonials-container">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-grid">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <div class="testimonial-quote">“</div>
-                <p class="testimonial-text">
-                    Amazing digital products and seamless purchasing experience. 
-                    Highly recommended for creative professionals!
-                </p>
-                <div class="testimonial-author">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" class="author-image">
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Premium Digital Assets Marketplace</h1>
+            <p>Discover high-quality digital products for all your creative needs</p>
+            <a href="#products" class="buy-btn" style="width: auto; margin-top: 2rem;">Explore Products</a>
+        </div>
+    </section>
+
+    <main>
+        <div class="products-container" id="products"></div>
+    </main>
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Amazing digital products and seamless purchasing experience. Highly recommended!"
+                    </p>
                     <div class="author-info">
                         <div class="author-name">John Smith</div>
                         <div class="author-role">Graphic Designer</div>
                     </div>
                 </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-                <div class="testimonial-quote">“</div>
-                <p class="testimonial-text">
-                    The quality of assets is outstanding. Quick delivery and excellent 
-                    customer support. Will definitely buy again!
-                </p>
-                <div class="testimonial-author">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" class="author-image">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The quality of assets is outstanding. Quick delivery and excellent support!"
+                    </p>
                     <div class="author-info">
                         <div class="author-name">Sarah Johnson</div>
                         <div class="author-role">Web Developer</div>
                     </div>
                 </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card">
-                <div class="testimonial-quote">“</div>
-                <p class="testimonial-text">
-                    Best marketplace for digital assets. The payment process 
-                    is secure and verification is quick. 5 stars!
-                </p>
-                <div class="testimonial-author">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" class="author-image">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Secure payment process and fast verification. 5 stars experience!"
+                    </p>
                     <div class="author-info">
                         <div class="author-name">Michael Chen</div>
                         <div class="author-role">Content Creator</div>
@@ -309,96 +304,63 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-    <main>
-        <div class="products-container" id="products"></div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Hamza's Store. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Terms of Service</a>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Premium digital assets marketplace since 2023. Quality guaranteed.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Hamza's Store. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="payment-modal" id="paymentModal">
         <div class="payment-content">
             <h2>Select Payment Method</h2>
-            <div class="payment-method" data-method="card">💳 Credit/Debit Card (coming soon) </div>
+            <div class="payment-method" data-method="card">💳 Credit/Debit Card (Coming Soon)</div>
             <div class="payment-method" data-method="easypaisa">📱 Easypaisa</div>
             <div class="payment-method" data-method="jazzcash">📶 JazzCash</div>
 
-           <!-- Update the manual payment section -->
-<div id="manualPayment" style="display: none;">
-    <p>Send payment to: <strong>03039629178</strong></p>
-    <div id="transactionSection">
-        <input type="text" class="transaction-id-input" placeholder="Enter Transaction ID">
-        <button onclick="submitTransaction()" class="buy-btn">Submit Transaction ID</button>
+            <div id="manualPayment" style="display: none;">
+                <p>Send payment to: <strong>03039629178</strong></p>
+                <div id="transactionSection">
+                    <input type="text" class="transaction-id-input" placeholder="Enter Transaction ID">
+                    <button onclick="submitTransaction()" class="buy-btn">Submit Transaction ID</button>
+                </div>
+                <div id="emailSection" style="display: none;">
+                    <input type="email" class="email-input" placeholder="Enter your email" required>
+                    <button onclick="submitEmail()" class="buy-btn">Submit Email</button>
+                </div>
+                <div id="thankYouMessage" style="display: none; text-align: center;">
+                    <h3>Thank you! 🎉</h3>
+                    <p>Verification in progress. Product will be sent to:</p>
+                    <p id="submittedEmail" style="color: #2ecc71; font-weight: bold;"></p>
+                </div>
+            </div>
+            <button onclick="closePaymentModal()" style="margin-top: 20px; background: #3a3a3a;" class="buy-btn">Cancel</button>
+        </div>
     </div>
-    <div id="emailSection" style="display: none;">
-        <input type="email" class="email-input" placeholder="Enter your email address" required>
-        <button onclick="submitEmail()" class="buy-btn">Submit Email</button>
-    </div>
-    <div id="thankYouMessage" style="display: none; text-align: center;">
-        <h3>Thank you for your purchase! 🎉</h3>
-        <p>We're verifying your payment. You'll receive your digital product at:</p>
-        <p id="submittedEmail" style="font-weight: bold;"></p>
-        <p>Please allow up to 24 hours for verification.</p>
-    </div>
-</div>
-<script>
-// Updated payment functions
-let transactionId = '';
-
-async function submitTransaction() {
-    transactionId = document.querySelector('.transaction-id-input').value;
-    if (transactionId.length < 5) {
-        alert('Please enter a valid transaction ID');
-        return;
-    }
-    
-    document.getElementById('transactionSection').style.display = 'none';
-    document.getElementById('emailSection').style.display = 'block';
-}
-
-async function submitEmail() {
-    const emailInput = document.querySelector('.email-input');
-    const email = emailInput.value;
-    
-    if (!validateEmail(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    try {
-        const response = await fetch('/verify-manual-payment', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                ...selectedProduct,
-                transactionId,
-                email
-            })
-        });
-        
-        const result = await response.json();
-        if (result.success) {
-            document.getElementById('emailSection').style.display = 'none';
-            document.getElementById('thankYouMessage').style.display = 'block';
-            document.getElementById('submittedEmail').textContent = email;
-        }
-    } catch (error) {
-        console.error('Verification failed:', error);
-    }
-}
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-</script>
 
     <script src="https://js.stripe.com/v3/"></script>
     <script>
@@ -426,78 +388,68 @@ function validateEmail(email) {
             `).join('');
         }
 
-        // Event Listeners
+        // Payment Modal Handling
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('buy-btn')) {
+            // Open modal on purchase button click
+            if (e.target.classList.contains('buy-btn') && e.target.dataset.id) {
                 selectedProduct = products.find(p => p.id == e.target.dataset.id);
                 document.getElementById('paymentModal').style.display = 'flex';
             }
             
+            // Handle payment method selection
             if (e.target.classList.contains('payment-method')) {
                 document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
                 e.target.classList.add('selected');
                 document.getElementById('manualPayment').style.display = 
                     e.target.dataset.method === 'card' ? 'none' : 'block';
-                
-                if (e.target.dataset.method === 'card') processCardPayment();
             }
         });
 
-        async function processCardPayment() {
-            try {
-                const response = await fetch('/create-checkout-session', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(selectedProduct)
-                });
-                
-                const session = await response.json();
-                await stripe.redirectToCheckout({ sessionId: session.id });
-            } catch (error) {
-                console.error('Payment failed:', error);
-            }
-        }
-
-        async function submitManualPayment() {
-            const transactionId = document.querySelector('.transaction-id-input').value;
-            try {
-                const response = await fetch('/verify-manual-payment', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        ...selectedProduct,
-                        transactionId
-                    })
-                });
-                
-                const result = await response.json();
-                if (result.success) {
-                    alert('Payment verified! Download starting...');
-                    window.location.href = result.downloadUrl;
-                }
-            } catch (error) {
-                console.error('Verification failed:', error);
-            }
-        }
+        // Close modal when clicking outside
+        document.getElementById('paymentModal').addEventListener('click', function(e) {
+            if (e.target === this) closePaymentModal();
+        });
 
         function closePaymentModal() {
             document.getElementById('paymentModal').style.display = 'none';
+            // Reset form state
+            document.getElementById('manualPayment').style.display = 'none';
+            document.getElementById('transactionSection').style.display = 'block';
+            document.getElementById('emailSection').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'none';
+            document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+        }
+
+        // Payment Functions
+        async function submitTransaction() {
+            const transactionId = document.querySelector('.transaction-id-input').value;
+            if (transactionId.length < 5) {
+                alert('Please enter a valid transaction ID');
+                return;
+            }
+            document.getElementById('transactionSection').style.display = 'none';
+            document.getElementById('emailSection').style.display = 'block';
+        }
+
+        async function submitEmail() {
+            const email = document.querySelector('.email-input').value;
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email');
+                return;
+            }
+            
+            try {
+                // Simulate API call
+                document.getElementById('emailSection').style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+                document.getElementById('submittedEmail').textContent = email;
+            } catch (error) {
+                console.error('Error:', error);
+            }
         }
 
         // Initialize
         renderProducts();
     </script>
-    <script>
-        // Add smooth scroll behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    
 </body>
 </html>
